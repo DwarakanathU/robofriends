@@ -1,9 +1,18 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import CardList from "./CardList";
-import { robots } from "./robots";
+import Scroll from "./Scroll";
+// import { robots } from "./robots";
 import SearchBox from "./SearchBox";
 function App() {
   const [searchValue, setSearchValue] = useState("");
+  const [robots, setRobots] = useState([]);
+  console.log(robots);
+  useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/users")
+      .then((res) => setRobots(res.data));
+  }, []);
   console.log(searchValue);
   return (
     <div className="App">
@@ -13,9 +22,11 @@ function App() {
       </div>
       <br />
       <hr />
-      <div className="cards-containers">
-        <CardList robots={robots} searchValue={searchValue} />
-      </div>
+      <Scroll>
+        <div className="cards-containers">
+          <CardList robots={robots} searchValue={searchValue} />
+        </div>
+      </Scroll>
     </div>
   );
 }

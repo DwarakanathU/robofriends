@@ -12,6 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
@@ -23,10 +24,27 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  border: 1px solid black;
+}
+
+.scroll_bar {
+  overflow-y: scroll;
+  height: 800px;
+
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888888;
+  border-radius: 10px;
 }
 
 .search-box-container {
-  margin-top: 15px;
+  margin: 15px;
   display: flex;
   justify-content: center;
 }
@@ -45,9 +63,11 @@ input {
   border-radius: 10px;
   border: 2px solid #888888;
   font-size: 1.2rem;
+
 }
 
 hr {
   border-style: none;
   border-bottom: 3px dashed rebeccapurple;
+  padding-bottom: 20px;
 }
