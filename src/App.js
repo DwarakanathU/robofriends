@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import CardList from "./CardList";
-import Scroll from "./Scroll";
+import CardList from "./components/CardList";
+import Scroll from "./container/Scroll";
 // import { robots } from "./robots";
-import SearchBox from "./SearchBox";
+import SearchBox from "./components/SearchBox";
 function App() {
   const [searchValue, setSearchValue] = useState("");
   const [robots, setRobots] = useState([]);
