@@ -1,7 +1,6 @@
 import "./Card.css";
 
 const Card = ({ id, name, email }) => {
-  console.log(id);
   return (
     <div className="card-container">
       <img src={`https://robohash.org/${id}`} alt="robots" />
