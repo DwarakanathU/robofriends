@@ -1,0 +1,26 @@
+.card-container {
+
+    background-color: rgb(221, 221, 186);
+    box-shadow: 2px 3px 5px #736767;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    /* display: flex; */
+    transition: all 3s;
+}
+
+.card-container:hover {
+    transform: scale(1.1);
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+h4,
+p {
+    color: blueviolet;
+    font-size: .8rem;
+    font-weight: bold;
+}
